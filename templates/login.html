@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="static/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+    <div class="main">
+        <div class="logo">
+            <h2>The Providers</h2>
+        </div>
+        <div class="signin">
+            <h1>Welcome!</h1>
+            <p>Sign into your account</p>
+            <form>
+                <label>E-mail</label>
+                <i class="far fa-user">
+                <input type="text" placeholder="Nickson" required></i>
+                <label>Password</label>
+                <i class="fas fa-unlock-alt">
+                <input type="Password" placeholder="********" required></i>
+                <a href="#">Forget Password</a><br>
+                <a href="{{url_for('home')}}" class="button">Login</a>
+            </form>
+            <ul>
+                <li><i class="fab fa-facebook-f"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-youtube"></i></li>
+                <li><i class="fab fa-whatsapp"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

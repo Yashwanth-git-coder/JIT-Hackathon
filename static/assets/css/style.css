@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #F8F4E1;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+}
+
+.main {
+    display: inline-flex;
+    box-shadow: 0 2px 10px 10px rgba(0,0,0,0.2);
+}
+
+.logo {
+    width: 550px;
+    height: 450px;
+    background-image: url(https://esgplaybook.com/wp-content/uploads/2021/09/undraw_security_o890.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.logo h2 {
+    padding: 15px;
+    color: #5d58ed;
+}
+
+.signin {
+    width: 300px;
+    background: #5d58ed;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+form label {
+    float: left;
+    margin: 25px 0px 0px 40px;
+}
+
+label, p {
+    font-size: 14px;
+}
+
+form input {
+    width: 200px;
+    height: 30px;
+    color: #fff;
+    background: #3b3e87;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+form input::placeholder {
+    color: #fff;
+    opacity: .7;
+}
+
+form a {
+    color: #fff;
+    font-size: 14px;
+    float: right;
+    margin: 35px 25px;
+}
+
+form .button {
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    line-height: 5px;
+    background: #ed0c2e;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 30px 0 30px 40px;
+    padding: 20px;
+}
+
+form .button:hover {
+    transition: .5s;
+    background: #cf2b44;
+}
+
+ul {
+    list-style: none;
+    margin: 20px;
+}
+
+li {
+    font-size: 18px;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+
+
+

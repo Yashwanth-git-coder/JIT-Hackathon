@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--=============== FAVICON ===============-->
+<link rel="shortcut icon" href="static/assets/img/favicon.png" type="image/x-icon">
+
+<!--=============== REMIXICONS ===============-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.css">
+
+<!--=============== SWIPER CSS ===============-->
+<link rel="stylesheet" href="static/assets/css/swiper-bundle.min.css">
+
+
+<!--=============== CSS ===============-->
+<link rel="stylesheet" href="static/assets/css/styles.css">
+
+<title>Admin</title>
+</head>
+<body>
+<!--==================== HEADER ====================-->
+<header class="header" id="header">
+ <nav class="nav container">
+    <a href="#" class="nav__logo">
+       <i class="ri-book-3-line"></i> QuestIn-Readers
+    </a>
+
+    <div class="nav__menu">
+        <ul class="nav__list">
+           <li class="nav__item">
+              <a href="{{url_for('home')}}" class="nav__link active-link">
+                 <i class="ri-home-3-line"></i>
+                 <span>Home</span>
+              </a>
+           </li>
+           <li class="nav__item">
+              <a href="#featured" class="nav__link">
+                 <i class="ri-book-2-line"></i>
+                 <span>About Us</span>
+              </a>
+           </li>
+           <li class="nav__item">
+              <a href="#discount" class="nav__link">
+                 <i class="ri-price-tag-3-line"></i>
+                 <span>Contact Us</span>
+              </a>
+           </li>
+           <li class="nav__item">
+              <a href="#new" class="nav__link">
+                 <i class="ri-bookmark-2-line"></i>
+                 <span>Chat-Bot</span>
+              </a>
+           </li>
+           <li class="nav__item">
+              <a href="#testimonial" class="nav__link">
+                 <i class="ri-chat-3-line"></i>
+                 <span>Testimonial</span>
+              </a>
+           </li>
+        </ul>
+    </div>
+    <div class="nav__actions">
+       <!-- search button -->
+       <i class="ri-search-line search-button" id="search-button"></i>
+
+       <!-- Login button -->
+       <!-- <i class="ri-user-3-line login-button" id="login-button"></i> -->
+       <a href="#">
+       <i class="ri-user-3-line login-button"></i>
+       </a>
+
+       <!-- Theme button -->
+       <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+    </div>
+ </nav>
+</header>
+
+<div class="containers">
+  <div class="buttons">
+    <a href="{{ url_for('adbanner') }}">
+        <button type="button" class="btn">Ad Banner</button>
+    </a>
+      <a href="{{ url_for('scrape') }}">
+    <button type="button" class="btn">Fatch News</button>
+      </a>
+      <a href="{{ url_for('delete_all') }}">
+    <button type="button" class="btn">Delete News</button>
+          </a>
+      <a href="#">
+    <button type="button" class="btn">Coming Soon</button>
+          </a>
+  </div>
+    <section class="flash-message-section">
+            <div>
+                {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                    <ul>
+                    {% for message in messages %}
+                      <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                  {% endif %}
+                {% endwith %}
+            </div>
+        </section>
+</div>
+
+
+<!--========== SCROLL UP ==========-->
+<a href="#" class="scrollup" id="scroll-up">
+  <i class="ri-arrow-up-line"></i>
+</a>
+
+<!--=============== SCROLLREVEAL ===============-->
+<script src="static/assets/js/scrollreveal.min.js"></script>
+
+<!--=============== SWIPER JS ===============-->
+<script src="static/assets/js/swiper-bundle.min.js"></script>
+
+<!--=============== MAIN JS ===============-->
+<script src="static/assets/js/main.js"></script>
+
+
+
+</body>
+</html>

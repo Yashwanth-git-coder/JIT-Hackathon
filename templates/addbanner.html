@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+
+        main {
+            padding-top: 180px;
+            padding-bottom: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <main class="mb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+
+
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        {{ form.hidden_tag() }}
+                        <div>
+                            <label for="image">Ad Banner Image:</label>
+                            {{ form.adbookimage(class="form-control", id="image") }}
+                            {% for error in form.adbookimage.errors %}
+                                <span class="error-message">{{ error }}</span>
+                            {% endfor %}
+                        </div>
+
+                        <div>
+                            <label for="adbookname">Ad Book Name:</label>
+                            {{ form.adbookname(class="form-control", id="adbookname") }}
+                            {% for error in form.adbookname.errors %}
+                                <span class="error-message">{{ error }}</span>
+                            {% endfor %}
+                        </div>
+
+                        <br>
+                        <div>
+                            {{ form.submit(class="btn btn-primary") }}
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
